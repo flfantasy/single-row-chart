@@ -97,7 +97,13 @@ class View(object):
                 self.M=0
             elif 2<=self.tuple_num<=10:
                 sumY=sum(self.Y[0])
-                self.M=reduce(lambda x,y:x+y,map(lambda y:-(1.0*y/sumY)*math.log(1.0*y/sumY),self.Y[0]))
+                self.M=reduce(
+                    lambda x,y : x+y,
+                    map(
+                        lambda y : -(1.0*y/sumY)*math.log(1.0*y/sumY),
+                        self.Y[0]
+                    )
+                )
             elif self.tuple_num>10:
                 sumY=sum(self.Y[0])
                 for i in self.Y[0]:

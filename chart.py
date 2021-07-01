@@ -48,7 +48,7 @@ def which_chart(tables,table_num):
 
                 self.features.append(f)
         else:
-            print "error:table"+i+"not transformed"
+            print "error:table"+str(i)+"not transformed"
 
         for j in range(self.column_num):
             for k in range(self.column_num):

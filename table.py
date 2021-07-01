@@ -1,3 +1,4 @@
+#coding=utf-8
 import datetime
 
 #from typing import List, Any
@@ -113,7 +114,9 @@ class Table(object):
         maxNum = f.max
         bins = []
         if maxNum<=50:
-            for i in range(int(maxNum)):
+            # 就是这里开始有问题
+            # for i in range(int(maxNum)):
+            for i in range(100):
                 bins.append([str(i)+','+ str(i+1)])
         else:
             for i in range(50):
